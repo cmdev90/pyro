@@ -1,0 +1,10 @@
+{
+	"name": "pyrojs",
+	"description": "A simple boiler plate for quickly building APIs in node.",
+	"version": "0.0.1",
+	"private": true,
+	"start": "pyro/pyro.js",
+	"dependencies": {
+		"express": "3.x"
+	}
+}
