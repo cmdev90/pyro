@@ -1,6 +1,6 @@
 // Sample model code.
 
-modules.exports = {
+module.exports = {
 	create: function (options) {
 		return {
 			name: options.name,
