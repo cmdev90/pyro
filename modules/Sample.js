@@ -1,3 +1,4 @@
+
 // Sample module file.
 // Modules will be made accesable via the global module
 // object.
@@ -18,7 +19,7 @@ module.exports = function (req, res) {
 	 }
 
 	 // return a POJSO describing the public functions of this 
-	 // object.
+	 // module.
 	return {
 		// public functions can take its own parameters.
 		publicFunction: function (param, callback) { 
