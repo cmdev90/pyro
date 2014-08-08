@@ -9,4 +9,7 @@
 
 var app = require('./libs/index.js')
 
-app.start()
+require('./libs/loaders/module.js')(__dirname + '/modules')
+
+console.log(pyro.AnotherSample({},{}))
+// app.start()

@@ -18,25 +18,27 @@ module.exports = function (req, res) {
 		return console.log("options passed", options)
 	}
 
-	// return a POJSO describing the public functions of this 
-	// module.
-	return {
-		// public functions can take its own parameters.
-		publicFunction: function (param, callback) { 
-			// We can call private functions here!
-			privateFunction({message: 'this is a call from private'})
+	// public functions can take its own parameters.
+	var publicFunction = function (param, callback) { 
+		// We can call private functions here!
+		privateFunction({message: 'this is a call from private'})
 
-			// Because of cloures you have access to the
-			// req and res objects!
-			// if (req && res) {
-				console.log("req", req)
-				console.log("res", res)
-			// }
-			// else {
-				// You are able to choose context of execution by either returning to
-				// the res object or passing the result directly back.
-				return callback(param)
-			// }
-		}
+		// Because of cloures you have access to the
+		// req and res objects!
+		// if (req && res) {
+			console.log("req", req)
+			console.log("res", res)
+		// }
+		// else {
+			// You are able to choose context of execution by either returning to
+			// the res object or passing the result directly back.
+			return callback(param)
+		// }
+	}
+
+	// return a POJSO describing the public functions of this 
+	// module. This is another way of reviling functions.
+	return {
+		publicFunction: publicFunction
 	}
 } // never self-invoke this function space. You will break things...
