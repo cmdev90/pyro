@@ -6,7 +6,10 @@ module.exports = {
 			name: options.name,
 			age: options.age,
 			gender: options.gender,
-			country: options.country
+			country: options.country,
+			save: function(success, error){
+				console.log('saved', this);
+			}
 		}
-	}
+	},
 }
