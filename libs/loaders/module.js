@@ -31,7 +31,7 @@ module.exports = function (rootdir) {
 			}
 		}
 	}
-	global.pyro = modules
+	global.modules = modules
 
 	endTime = new Date()
 	console.log('Time to load', endTime-startTime + 'ms')
